@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/usuariosCad.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="usuarios.html" class="active">Usuários</a>
+        <a href="compras.html">Compras</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="cadastro_lote.html">Cadastro em Lote</a>
+    </div>
+
+    <div class="container">
+        <h1>Gerenciamento de Usuários</h1>
+        
+        <div class="navbar sub-navbar">
+            <a href="usuarios.html">Listar Usuários</a>
+            <a href="usuariosCad.html" class="active">Cadastrar Usuário</a>
+            <a href="usuariosEdit.html">Editar Usuário</a>
+            <a href="usuariosDelete.html">Deletar Usuário</a>
+            <a href="usuariosBuscar.html">Buscar Usuário</a>
+        </div>
+
+        <h2>Cadastrar Novo Usuário</h2>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="primeiroNome">Nome:</label>
+                <input type="text" id="primeiroNome" required>
+            </div>
+            <div class="form-group">
+                <label for="sobreNome">Sobrenome:</label>
+                <input type="text" id="sobreNome" required>
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade:</label>
+                <input type="text" id="idade" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" required>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" required>
+            </div>
+            <div class="form-group">
+                <label for="nascimento">Nascimento:</label>
+                <input type="date" id="nascimento" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="cadUser">Salvar Usuário</button>
+        </form>
+
+        <div id="resCad">
+    </div>
+
+    </div>
+    </body>
+</html>
+

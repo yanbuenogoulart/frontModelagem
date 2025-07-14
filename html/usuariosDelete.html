@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/usuariosRemover.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="usuarios.html" class="active">Usuários</a>
+        <a href="compras.html">Compras</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="cadastro_lote.html">Cadastro em Lote</a>
+    </div>
+
+    <div class="container">
+        <h1>Gerenciamento de Usuários</h1>
+        
+        <div class="navbar sub-navbar">
+            <a href="usuarios.html">Listar Usuários</a>
+            <a href="usuariosCad.html">Cadastrar Usuário</a>
+            <a href="usuariosEdit.html">Editar Usuário</a>
+            <a href="usuariosDelete.html" class="active">Deletar Usuário</a>
+            <a href="usuariosBuscar.html">Buscar Usuário</a>
+        </div>
+
+        <h2>Deletar Usuário</h2>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="userRemoveID">ID do Usuário:</label>
+                <input type="text" id="userRemoveID" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="removeUser">Salvar Usuário</button>
+        </form>
+
+        <div id="resDeleteUser">
+    </div>
+
+    </div>
+    </body>
+</html>
+
