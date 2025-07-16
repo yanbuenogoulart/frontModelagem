@@ -1,6 +1,6 @@
 const botao = document.getElementById('botaoDB');
 const cadUser = document.getElementById('cadUser')
-const resCad = document.getElementById('resCad')
+const resLote = document.getElementById('resLote')
 
 botao.addEventListener('click', async (e) => {
     e.preventDefault();
@@ -57,7 +57,7 @@ botao.addEventListener('click', async (e) => {
                 body: JSON.stringify(dadosProducts)
             });
         }
-        
+        resLote.innerHTML = 'Banco de dados populado!'
         alert('Banco de dados populado com sucesso!');
     } catch (error) {
         console.error('Erro ao povoar o banco de dados:', error);

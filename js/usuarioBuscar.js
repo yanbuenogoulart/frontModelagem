@@ -46,7 +46,7 @@ async function buscarUserID(e) {
         } else {
             console.log(user.length)
             for (i = 0; i < user.length; i++) {
-                const newRow2 = document.createElement('tr') // <-- mover para dentro do for
+                const newRow2 = document.createElement('tr')
                 newRow2.innerHTML = `
                     <td>${user[i].idUser}</td>
                     <td>${user[i].primeiroNome}</td>

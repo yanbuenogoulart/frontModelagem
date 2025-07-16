@@ -1,6 +1,11 @@
 const cadUser = document.getElementById('editUser')
 const resCad = document.getElementById('resEditUser')
 
+function formatarData(data) {
+    return data.slice(0,10)
+}
+
+
 async function editarUser(e) {
     e.preventDefault()
     try {
@@ -26,7 +31,18 @@ async function editarUser(e) {
         })
 
         const user = response.json()
-        resCad.innerHTML = `${dados.primeiroNome}`
+        resCad.innerHTML = `
+            Usuário editado com sucesso!<br>
+            <br>Id: ${dados.idUser}
+            <br>Nome: ${dados.primeiroNome}
+            <br>Sobrenome: ${dados.sobreNome}
+            <br>Idade: ${dados.idade}
+            <br>Email: ${dados.email}
+            <br>Endereço: ${dados.endereco}
+            <br>Cidade: ${dados.cidade}
+            <br>Estado: ${dados.estado}
+            <br>Nascimento: ${formatarData(dados.nascimento)}
+            `
     } catch (error) {
         console.error(error)
     }

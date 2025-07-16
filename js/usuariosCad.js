@@ -25,7 +25,18 @@ async function cadastrarUser(e) {
         })
 
         const user = response.json()
-        resCad.innerHTML = `${dados.primeiroNome}`
+        resCad.innerHTML = `
+        Usuário cadastrado com sucesso!<br>
+        <br>Id: ${dados.idUser}
+        <br>Nome: ${dados.primeiroNome}
+        <br>Sobrenome: ${dados.sobreNome}
+        <br>Idade: ${dados.idade}
+        <br>Email: ${dados.email}
+        <br>Endereço: ${dados.endereco}
+        <br>Cidade: ${dados.cidade}
+        <br>Estado: ${dados.estado}
+        <br>Nascimento: ${formatarData(dados.nascimento)}
+        `
     } catch (error) {
         console.error(error)
     }
