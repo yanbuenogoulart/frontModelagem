@@ -1,5 +1,9 @@
 const formulario = document.getElementById('formulario')
 
+function formatarData(data) {
+    return data.slice(0,10)
+}
+
 async function loadData() {
     try {
         console.log("iniciando")
@@ -27,7 +31,7 @@ async function loadData() {
             <td>${user.endereco}</td>
             <td>${user.cidade}</td>
             <td>${user.estado}</td>
-            <td>${user.nascimento}</td>
+            <td>${formatarData(user.nascimento)}</td>
             `
             formulario.appendChild(newRow)
         })

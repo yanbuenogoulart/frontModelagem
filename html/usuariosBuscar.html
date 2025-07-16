@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/usuarioBuscar.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="usuarios.html" class="active">Usuários</a>
+        <a href="compras.html">Compras</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="cadastro_lote.html">Cadastro em Lote</a>
+    </div>
+
+    <div class="container">
+        <h1>Gerenciamento de Usuários</h1>
+        
+        <div class="navbar sub-navbar">
+            <a href="usuarios.html">Listar Usuários</a>
+            <a href="usuariosCad.html">Cadastrar Usuário</a>
+            <a href="usuariosEdit.html">Editar Usuário</a>
+            <a href="usuariosDelete.html">Deletar Usuário</a>
+            <a href="usuariosBuscar.html" class="active">Buscar Usuário</a>
+        </div>
+
+        <h2>Buscar Usuário</h2>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="selectUser">Selecionar usuario por: </label>
+                <select name="" id="selectUser">
+                    <option value="bscID">ID</option>
+                    <option value="bscNOME">NOME</option>
+                </select>
+                <label for="searchUser">ID/NOME do Usuário:</label>
+                <input type="text" id="searchUserID" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="searchUser">Buscar Usuário</button>
+        </form>
+        <h2>Lista de Usuários</h2>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Idade</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Cidade</th>
+                    <th>Estado</th>
+                    <th>Nascimento</th>
+                </tr>
+            </thead>
+            <tbody id="formulario2">
+
+            </tbody>
+        </table>
+
+        <div id="resSearchUser">
+    </div>
+
+    </div>
+    </body>
+</html>
+
