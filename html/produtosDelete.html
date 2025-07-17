@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/produtosRemover.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="usuarios.html" class="active">Produtos</a>
+        <a href="compras.html">Compras</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="cadastro_lote.html">Cadastro em Lote</a>
+    </div>
+
+    <div class="container">
+        <h1>Gerenciamento de Produtos</h1>
+        
+        <div class="navbar sub-navbar">
+            <a href="produtos.html">Listar Produtos</a>
+            <a href="produtosCad.html">Cadastrar Produto</a>
+            <a href="produtosEdit.html">Editar Produto</a>
+            <a href="produtosDelete.html" class="active">Deletar Produto</a>
+            <a href="produtosBuscar.html">Buscar Produto</a>
+        </div>
+
+        <h2>Deletar Produto</h2>
+        <form id="Produto-form">
+            <div class="form-group">
+                <label for="produtoRemoveID">ID do Produto:</label>
+                <input type="text" id="produtosRemoveID" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="removeProduto">Deletar Produto</button>
+        </form>
+
+        <div id="resDeleteProduto">
+    </div>
+
+    </div>
+    </body>
+</html>
+
