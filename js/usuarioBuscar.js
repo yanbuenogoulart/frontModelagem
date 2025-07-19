@@ -27,6 +27,15 @@ async function buscarUserID(e) {
                 "Content-Type": "application/json"
             },
         })
+
+        if (!response.ok) {
+            if (response.status === 404) {
+                alert('Usuário com esse ID/NOME não existe!')
+            } else {
+                alert(`Erro ao buscar Usuário: ${response.status}`)
+            }
+            return
+        }
         const user = await response.json()
         console.log(user)
         const newRow = document.createElement('tr') 
@@ -62,15 +71,6 @@ async function buscarUserID(e) {
             }
         }
 
-        
-    } catch (error) {
-        console.error(error)
-    }
-}
-
-async function  buscarUserNome(e) {
-    e.preventDefault()
-    try {
         
     } catch (error) {
         console.error(error)

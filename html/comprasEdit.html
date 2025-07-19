@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Compras</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/comprasEdit.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="usuarios.html" >Usuários</a>
+        <a href="compras.html" class="active">Compras</a>
+        <a href="produtos.html" >Produtos</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="cadastro_lote.html">Cadastro em Lote</a>
+    </div>
+
+    <div class="container">
+        <h1>Gerenciamento de Compras</h1>
+        
+        <div class="navbar sub-navbar">
+            <a href="compras.html">Listar Compras</a>
+            <a href="comprasCad.html">Cadastrar Compra</a>
+            <a href="comprasEdit.html" class="active">Editar Compra</a>
+            <a href="comprasDelete.html">Deletar Compra</a>
+            <a href="comprasBuscar.html">Buscar Compra</a>
+        </div>
+
+        <h2>Editar Compra</h2>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="idComEdit">ID Compra:</label>
+                <input type="text" id="idComEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="idUserComEdit">ID User:</label>
+                <input type="text" id="idUserComEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="idProdutoComEdit">ID Produto:</label>
+                <input type="text" id="idProdComEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="quantidadeComEdit">Quantidade:</label>
+                <input type="number" id="quantidadeComEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="dataCompraComEdit">Data da Compra:</label>
+                <input type="date" id="dataCompraComEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="formaPagamentoComEdit">Forma de Pagamento:</label>
+                <select name="" id="formaPagamentoComEdit" required>
+                    <option id="pix">PIX</option>
+                    <option id="cartao">Cartão</option>
+                    <option id="boleto">Boleto</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="statusCompraComEdit">Status da Compra:</label>
+                <select name="" id="statusCompraComEdit" required>
+                    <option id="pendente">Pendente</option>
+                    <option id="concluida">Concluída</option>
+                    <option id="cancelada">Cancelada</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" id="editCom">Editar Compra</button>
+        </form>
+
+        <div id="resEditCom">
+    </div>
+
+    </div>
+    </body>
+</html>
+

@@ -1,6 +1,10 @@
 const cadUser = document.getElementById('cadUser')
 const resCad = document.getElementById('resCad')
 
+function formatarData(data) {
+    return data.slice(0,10)
+}
+
 async function cadastrarUser(e) {
     e.preventDefault()
     try {

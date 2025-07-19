@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Compras</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/comprasCad.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="usuarios.html">Usuários</a>
+        <a href="compras.html" class="active">Compras</a>
+        <a href="produtos.html" >Produtos</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="cadastro_lote.html">Cadastro em Lote</a>
+    </div>
+
+    <div class="container">
+        <h1>Gerenciamento de Compras</h1>
+        
+        <div class="navbar sub-navbar">
+            <a href="compras.html">Listar Compras</a>
+            <a href="comprasCad.html" class="active">Cadastrar Compra</a>
+            <a href="comprasEdit.html">Editar Compra</a>
+            <a href="comprasDelete.html">Deletar Compra</a>
+            <a href="comprasBuscar.html">Buscar Compra</a>
+        </div>
+
+        <h2>Cadastrar Nova Compra</h2>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="idUserCom">ID User:</label>
+                <input type="text" id="idUserCom" required>
+            </div>
+            <div class="form-group">
+                <label for="idProdutoCom">ID Produto:</label>
+                <input type="text" id="idProdCom" required>
+            </div>
+            <div class="form-group">
+                <label for="quantidadeCom">Quantidade:</label>
+                <input type="number" id="quantidadeCom" required>
+            </div>
+            <div class="form-group">
+                <label for="dataCompraCom">Data da Compra:</label>
+                <input type="date" id="dataCompraCom" required>
+            </div>
+            <div class="form-group">
+                <label for="formaPagamentoCom">Forma de Pagamento:</label>
+                <select name="" id="formaPagamentoCom" required>
+                    <option id="pix">PIX</option>
+                    <option id="cartao">Cartão</option>
+                    <option id="boleto">Boleto</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="statusCompraCom">Status da Compra:</label>
+                <select name="" id="statusCompraCom" required>
+                    <option id="pendente">Pendente</option>
+                    <option id="concluida">Concluída</option>
+                    <option id="cancelada">Cancelada</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" id="cadCom">Cadastrar Compra</button>
+        </form>
+        
+        <div id="resCadCom">
+    </div>
+
+    </div>
+    </body>
+</html>
+

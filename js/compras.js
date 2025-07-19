@@ -1,4 +1,4 @@
-const formulario = document.getElementById('formulario')
+const formulario = document.getElementById('formulario3')
 
 function formatarData(data) {
     return data.slice(0,10)
@@ -7,7 +7,7 @@ function formatarData(data) {
 async function loadData() {
     try {
         console.log("iniciando")
-        const response = await fetch('http://localhost:3000/produtos', {
+        const response = await fetch('http://localhost:3000/compras', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -16,23 +16,23 @@ async function loadData() {
         
         if (!response.ok) {
             console.error('erro')
-            return
         }
     
-        const produtos = await response.json()
+        const compras = await response.json()
         
-        produtos.forEach(produto => {
+        compras.forEach(compras => {
             const newRow = document.createElement('tr') 
             newRow.innerHTML = `
-            <td>${produto.idProd}</td>
-            <td>${produto.titulo}</td>
-            <td>${produto.descricao}</td>
-            <td>${produto.categoria}</td>
-            <td>R$${produto.preco}</td>
-            <td>${produto.desconto}%</td>
-            <td>${produto.estoque}</td>
-            <td>${produto.marca}</td>
-            <td><img src="${produto.thumbnail}" alt="${produto.titulo}" style="max-width: 80px; border-radius: 4px;"></td>
+            <td>${compras.idCompras}</td>
+            <td>${compras.idUsuario}</td>
+            <td>${compras.idProduto}</td>
+            <td>${compras.quantidade}</td>
+            <td>${formatarData(compras.dataCompra)}</td>
+            <td>R$${compras.precoUnitario}</td>
+            <td>${compras.descontoAplicado}%</td>
+            <td>R$${compras.precoFinal}</td>
+            <td>${compras.formaPagamento}</td>
+            <td>${compras.statusCompra}</td>
             `
             formulario.appendChild(newRow)
         })
@@ -45,5 +45,4 @@ async function loadData() {
 
 
 // rodar a funçao quando a página carregar
-
 document.addEventListener("DOMContentLoaded", loadData())

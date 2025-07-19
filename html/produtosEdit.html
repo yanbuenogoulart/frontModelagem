@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/produtosEdit.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="usuarios.html" >Usuários</a>
+        <a href="compras.html">Compras</a>
+        <a href="produtos.html" class="active">Produtos</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="cadastro_lote.html">Cadastro em Lote</a>
+    </div>
+
+    <div class="container">
+        <h1>Gerenciamento de Produtos</h1>
+        
+        <div class="navbar sub-navbar">
+            <a href="produtos.html">Listar Produtos</a>
+            <a href="produtosCad.html">Cadastrar Produto</a>
+            <a href="produtosEdit.html" class="active">Editar Produto</a>
+            <a href="produtosDelete.html">Deletar Produto</a>
+            <a href="produtosBuscar.html">Buscar Produto</a>
+        </div>
+
+        <h2>Editar Produto</h2>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="idProdEdit">Id do Produto:</label>
+                <input type="text" id="idProdEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="tituloProdEdit">Título:</label>
+                <input type="text" id="tituloProdEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="descricaoProdEdit">Descrição:</label>
+                <input type="text" id="descricaoProdEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="categoriaProdEdit">Categoria:</label>
+                <input type="text" id="categoriaProdEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="precoProdEdit">Preço:</label>
+                <input type="text" id="precoProdEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="descontoProdEdit">Desconto:</label>
+                <input type="text" id="descontoProdEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="estoqueProdEdit">Estoque:</label>
+                <input type="text" id="estoqueProdEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="marcaProdEdit">Marca:</label>
+                <input type="text" id="marcaProdEdit" required>
+            </div>
+            <div class="form-group">
+                <label for="thumbnailProdEdit">Thumbnail:</label>
+                <input type="text" id="thumbnailProdEdit" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="editProd">Editar Produto</button>
+        </form>
+
+        <div id="resEditProd">
+    </div>
+
+    </div>
+    </body>
+</html>
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/produtosBuscar.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="usuarios.html">Usuários</a>
+        <a href="compras.html">Compras</a>
+        <a href="produtos.html" class="active">Produtos</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="cadastro_lote.html">Cadastro em Lote</a>
+    </div>
+
+    <div class="container">
+        <h1>Gerenciamento de Produto</h1>
+        
+        <div class="navbar sub-navbar">
+            <a href="produtos.html">Listar Produto</a>
+            <a href="produtosCad.html">Cadastrar Produto</a>
+            <a href="produtosEdit.html">Editar Produto</a>
+            <a href="produtosDelete.html">Deletar Produto</a>
+            <a href="produtosBuscar.html" class="active">Buscar Produto</a>
+        </div>
+
+        <h2>Buscar Produto</h2>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="selectProd">Selecionar produto por: </label>
+                <select name="" id="selectProd">
+                    <option value="bscIDProd">ID</option>
+                    <option value="bscNOMEProd">NOME</option>
+                </select>
+                <label for="searchProd">ID/NOME do Produto:</label>
+                <input type="text" id="searchProdID" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="searchProd">Buscar Produto</button>
+        </form>
+        <h2>Lista de Produtos</h2>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+                    <th>Desconto</th>
+                    <th>Estoque</th>
+                    <th>Marca</th>
+                    <th>Thumbnail</th>
+                </tr>
+            </thead>
+            <tbody id="formulario2">
+
+            </tbody>
+        </table>
+
+        <div id="resSearchProd">
+    </div>
+
+    </div>
+    </body>
+</html>
+

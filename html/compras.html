@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Lista</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/compras.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="./index.html">Início</a>
+        <a href="usuarios.html">Usuários</a>
+        <a href="./compras.html" class="active">Compras</a>
+        <a href="./produtos.html">Produtos</a>
+        <a href="./relatorios.html">Relatórios</a>
+        <a href="./cadastro_lote.html">Cadastro em Lote</a>
+    </div>
+
+    <div class="container">
+        <h1>Gerenciamento de Compras</h1>
+
+        <div class="navbar sub-navbar">
+            <a href="compras.html" class="active">Listar Compras</a>
+            <a href="comprasCad.html">Cadastrar Compra</a>
+            <a href="comprasEdit.html">Editar Compra</a>
+            <a href="comprasDelete.html">Deletar Compra</a>
+            <a href="comprasBuscar.html">Buscar Compra</a>
+        </div>
+
+        <h2>Lista de Compras</h2>
+        <table id="prod-table">
+            <thead>
+                <tr>
+                    <th>ID COMPRA</th>
+                    <th>ID USER</th>
+                    <th>ID PRODUTO</th>
+                    <th>QUANTIDADE</th>
+                    <th>DATA DA COMPRA</th>
+                    <th>PREÇO UNITÁRIO</th>
+                    <th>DESCONTO APLICADO</th>
+                    <th>PREÇO FINAL</th>
+                    <th>FORMA DE PAGAMENTO</th>
+                    <th>STATUS DA COMPRA</th>
+                </tr>
+            </thead>
+            
+            <tbody id="formulario3">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -29,7 +29,13 @@ async function editarUser(e) {
             },
             body: JSON.stringify(dados)
         })
-
+        if (!response.ok) {
+            if (response.status === 404) {
+                return  alert('Usuário com esse ID não existe!')
+            } else {
+                return alert(`Erro ao buscar Usuário: ${response.status}`)
+            }
+        }
         const user = response.json()
         resCad.innerHTML = `
             Usuário editado com sucesso!<br>
