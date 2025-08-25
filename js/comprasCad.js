@@ -44,7 +44,8 @@ async function cadastrarCom(e) {
         const produto = await responseProd.json()
         dados.precoUnitario = produto.preco
         dados.descontoAplicado = produto.desconto
-        dados.precoFinal = (produto.preco - (produto.preco * (produto.desconto / 100))).toFixed(2)
+        dados.precoFinal = ((produto.preco - (produto.preco * (produto.desconto / 100))) * dados.quantidade).toFixed(2);
+
 
         const response = await fetch('http://localhost:3000/compras', {
             method: 'POST',
